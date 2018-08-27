@@ -101,7 +101,7 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 			add_action( 'init', array( $this, 'load_plugin_textdomain' ), 0 );
 
 			// Show action hook locations.
-			add_action( 'init', array( $this, 'show_action_hooks') );
+			add_action( 'init', array( $this, 'show_action_hooks' ) );
 		} // END init_hooks()
 
 		/**
@@ -123,26 +123,28 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 				'before_comments',
 				'after_comments',
 				'before_footer_widgets',
-				'after_footer_widgets'
+				'after_footer_widgets',
 			);
 
-			foreach( $action_hooks as $hook ) {
+			foreach ( $action_hooks as $hook ) {
 				add_action( 'coblocks_' . $hook, array( $this, 'coblocks_' . $hook ) );
 			}
 		} // END show_action_hooks()
 
-		/*-----------------------------------------------------------------------------------*/
-		/*  Indicator                                                                        */
-		/*-----------------------------------------------------------------------------------*/
-
+		/**
+		 * Shows the hook.
+		 *
+		 * @access public
+		 */
 		public function show_hook( $hook, $message, $color = 'red' ) {
 			return apply_filters( 'coblocks_show_hook', '<div style="width:100%; position:relative; border-bottom: 2px solid ' . $color . '; font-size: 12pt;">' . $message . '</div>', $hook, $message, $color );
-		} // END show_hook()
+		}
 
-		/*-----------------------------------------------------------------------------------*/
-		/*  Action Hooks                                                                     */
-		/*-----------------------------------------------------------------------------------*/
-
+		/**
+		 * Action hooks.
+		 *
+		 * @access public
+		 */
 		public function coblocks_before_site_logo() {
 			echo self::show_hook( 'coblocks_before_site_logo', '<div><p style="background-color: red; color: white; display: initial; padding: 4px;">coblocks_before_site_logo</p></div>' );
 		}
@@ -190,10 +192,6 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 		public function coblocks_after_footer_widgets() {
 			echo self::show_hook( 'coblocks_after_footer_widgets', '<div><p style="background-color: grey; display: initial; padding: 4px;">coblocks_after_footer_widgets</p></div>', 'grey' );
 		}
-
-		/*-----------------------------------------------------------------------------------*/
-		/*  Localization                                                                     */
-		/*-----------------------------------------------------------------------------------*/
 
 		/**
 		 * Make the plugin translation ready.
