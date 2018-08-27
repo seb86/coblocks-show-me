@@ -124,6 +124,10 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 				'after_comments',
 				'before_footer_widgets',
 				'after_footer_widgets',
+				'before_content',
+				'after_content',
+				'before_entry_title',
+				'after_entry_title',
 			);
 
 			foreach ( $action_hooks as $hook ) {
@@ -191,6 +195,22 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 
 		public function coblocks_after_footer_widgets() {
 			echo self::show_hook( 'coblocks_after_footer_widgets', '<div><p style="background-color: grey; display: initial; padding: 4px;">coblocks_after_footer_widgets</p></div>', 'grey' );
+		}
+
+		public function coblocks_before_content() {
+			echo self::show_hook( 'coblocks_before_content', '<div><p style="background-color: black; color: white; display: initial; padding: 4px;">coblocks_before_content</p></div>', 'grey' );
+		}
+
+		public function coblocks_after_content() {
+			echo self::show_hook( 'coblocks_after_content', '<div><p style="background-color: black; color: white; display: initial; padding: 4px;">coblocks_after_content</p></div>', 'grey' );
+		}
+
+		public function coblocks_before_entry_title() {
+			echo self::show_hook( 'coblocks_before_entry_title', '<div><p style="background-color: aqua; color: white; display: initial; padding: 4px;">coblocks_before_content</p></div>', 'grey' );
+		}
+
+		public function coblocks_after_entry_title() {
+			echo self::show_hook( 'coblocks_after_entry_title', '<div><p style="background-color: aqua; color: white; display: initial; padding: 4px;">coblocks_after_content</p></div>', 'grey' );
 		}
 
 		/**
