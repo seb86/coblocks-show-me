@@ -206,11 +206,11 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 		}
 
 		public function coblocks_before_entry_title() {
-			echo self::show_hook( 'coblocks_before_entry_title', '<div><p style="background-color: aqua; color: white; display: initial; padding: 4px;">coblocks_before_content</p></div>', 'grey' );
+			echo self::show_hook( 'coblocks_before_entry_title', '<div><p style="background-color: aqua; color: white; display: initial; padding: 4px;">coblocks_before_entry_title</p></div>', 'grey' );
 		}
 
 		public function coblocks_after_entry_title() {
-			echo self::show_hook( 'coblocks_after_entry_title', '<div><p style="background-color: aqua; color: white; display: initial; padding: 4px;">coblocks_after_content</p></div>', 'grey' );
+			echo self::show_hook( 'coblocks_after_entry_title', '<div><p style="background-color: aqua; color: white; display: initial; padding: 4px;">coblocks_after_entry_title</p></div>', 'grey' );
 		}
 
 		/**
