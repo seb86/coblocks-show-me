@@ -140,8 +140,8 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 		 *
 		 * @access public
 		 */
-		public function show_hook( $hook, $message, $color = '#d73a4a' ) {
-			return apply_filters( 'coblocks_show_hook', '<div style="width:100%; position:relative; border-bottom: 2px solid ' . $color . '; font-size: 10pt; font-family: monospace">' . $message . '</div>', $hook, $message, $color );
+		public function show_hook( $hook, $message, $color = '#d73a4a', $border = '2px' ) {
+			return apply_filters( 'coblocks_show_hook', '<div style="width:100%; position:relative; border-bottom: ' . $border . ' solid ' . $color . '; font-size: 10pt; font-family: monospace">' . $message . '</div>', $hook, $message, $color );
 		}
 
 		/**
@@ -150,11 +150,11 @@ if ( ! class_exists( 'CoBlocks_Show_Me' ) ) {
 		 * @access public
 		 */
 		public function coblocks_before_site_logo() {
-			echo self::show_hook( 'coblocks_before_site_logo', '<div><p style="background-color: #d73a4a; color: white; display: initial; padding: 4px;">coblocks_before_site_logo</p></div>' );
+			echo self::show_hook( 'coblocks_before_site_logo', '<div><p style="background-color: #d73a4a; color: white; display: initial; padding: 4px;">coblocks_before_site_logo</p></div>', '0' );
 		}
 
 		public function coblocks_after_site_logo() {
-			echo self::show_hook( 'coblocks_after_site_logo', '<div><p style="background-color: #d73a4a; color: white; display: initial; padding: 4px;">coblocks_after_site_logo</p></div>' );
+			echo self::show_hook( 'coblocks_after_site_logo', '<div><p style="background-color: #d73a4a; color: white; display: initial; padding: 4px;">coblocks_after_site_logo</p></div>', '0' );
 		}
 
 		public function coblocks_before_header() {
