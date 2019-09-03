@@ -2,21 +2,21 @@
 /*
  * Plugin Name: CoBlocks Show Me
  * Plugin URI:  https://github.com/seb86/coblocks-show-me
- * Description: Shows were the action hooks are available though out the CoBlocks theme.
+ * Description: Shows were the action hooks are available throughout the CoBlocks theme.
  * Author: Sébastien Dumont
  * Author URI: https://sebastiendumont.com
  * Version: 1.0.0
  * Text Domain: coblocks-show-me
  * Domain Path: /languages/
  *
- * Copyright: © 2018 Sébastien Dumont
+ * Copyright: © 2019 Sébastien Dumont
  *
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
  * @package   CoBlocks Show Me
  * @author    Sébastien Dumont
- * @copyright Copyright © 2018, Sébastien Dumont
+ * @copyright Copyright © 2019, Sébastien Dumont
  * @license   GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
